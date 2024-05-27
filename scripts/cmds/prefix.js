@@ -36,7 +36,8 @@ module.exports = {
 			confirmThisThread: "Vui lòng thả cảm xúc bất kỳ vào tin nhắn này để xác nhận thay đổi prefix trong nhóm chat của bạn",
 			successGlobal: "Đã thay đổi prefix hệ thống bot thành: %1",
 			successThisThread: "Đã thay đổi prefix trong nhóm chat của bạn thành: %1",
-			myPrefix: "🌐 Prefix của hệ thống: %1\n🛸 Prefix của nhóm bạn: %2"
+			myPrefix: "✨𝗛𝗶 𝗙𝗿𝗶𝗲𝗻𝗱!✨\n✨𝗧𝗵𝗶𝘀 𝗶𝘀 𝗺𝘆 𝗣𝗿𝗲𝗳𝗶𝘅 [ / ]\n
+𝗧𝗢 𝗩𝗜𝗘𝗪 𝗔𝗟𝗟 𝗢𝗙 𝗧𝗛𝗘\n𝗔𝗩𝗔𝗜𝗟𝗔𝗕𝗟𝗘  𝗖𝗢𝗠𝗠𝗔𝗡𝗗, 𝗧𝗬𝗣𝗘 [/𝗛𝗘𝗟𝗣]"
 		},
 		en: {
 			reset: "Your prefix has been reset to default: %1",
@@ -45,7 +46,8 @@ module.exports = {
 			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
 			successGlobal: "Changed prefix of system bot to: %1",
 			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "🌐 System prefix: %1\n🛸 Your box chat prefix: %2"
+			myPrefix: "✨𝗛𝗶 𝗙𝗿𝗶𝗲𝗻𝗱!✨\n✨𝗧𝗵𝗶𝘀 𝗶𝘀 𝗺𝘆 𝗣𝗿𝗲𝗳𝗶𝘅 [ / ]\n
+𝗧𝗢 𝗩𝗜𝗘𝗪 𝗔𝗟𝗟 𝗢𝗙 𝗧𝗛𝗘\n𝗔𝗩𝗔𝗜𝗟𝗔𝗕𝗟𝗘  𝗖𝗢𝗠𝗠𝗔𝗡𝗗, 𝗧𝗬𝗣𝗘 [/𝗛𝗘𝗟𝗣]"
 		}
 	},
 
