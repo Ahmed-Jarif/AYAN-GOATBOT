@@ -3,13 +3,13 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 𝗔𝗛𝗠𝗘𝗗 𝗦𝗢𝗝𝗜𝗕 ]"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
+const doNotDelete = "[ 𝗠𝗥.𝗔𝗬𝗔𝗡 ]"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
 
 module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "𝗔𝗛𝗠𝗘𝗗 𝗦𝗢𝗝𝗜𝗕", // original author 𝗠𝗥.𝗔𝗬𝗔𝗡
+    author: "𝗠𝗥.𝗔𝗬𝗔𝗡", // original author 𝗠𝗥.𝗔𝗬𝗔𝗡
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -46,7 +46,7 @@ module.exports = {
 
       Object.keys(categories).forEach((category) => {
         if (category !== "info") {
-          msg += `\╭──────⭓『  ${category.toUpperCase()}  』`;
+          msg += `\n╭─────⭓『  ${category.toUpperCase()}  』`;
 
 
           const names = categories[category].commands.sort();
@@ -55,14 +55,14 @@ module.exports = {
             msg += `\n│${cmds.join(" ".repeat(Math.max(1, 5 - cmds.join("").length)))}`;
           }
 
-          msg += `\╰───────────⭓`;
+          msg += `\n╰────────────⭓`;
         }
       });
 
       const totalCommands = commands.size;
-      msg += `\n\╭──────⭓[ 𝗘𝗻𝗷𝗼𝘆 ]\n│> 𝗧𝗼𝘁𝗮𝗹 𝗰𝗺𝗱𝘀: [${totalCommands}].\n│𝗧𝘆𝗽𝗲: [ ${prefix}𝗵𝗲𝗹𝗽 𝘁𝗼 \n│<𝗰𝗺𝗱> 𝘁𝗼 𝗹𝗲𝗮𝗿𝗻 𝘁𝗵𝗲 𝘂𝘀𝗮𝗴𝗲.]\n────────────⭓`;
+      msg += `\n\n╭─────⭓[ 𝗘𝗻𝗷𝗼𝘆 ]\n│> 𝗧𝗼𝘁𝗮𝗹 𝗰𝗺𝗱𝘀: [${totalCommands}].\n│𝗧𝘆𝗽𝗲: [ ${prefix}𝗵𝗲𝗹𝗽 𝘁𝗼 \n│<𝗰𝗺𝗱> 𝘁𝗼 𝗹𝗲𝗮𝗿𝗻 𝘁𝗵𝗲 𝘂𝘀𝗮𝗴𝗲.]\n╰────────────⭓`;
       msg += ``;
-      msg += `\╰──────⭓\n│🌟 | [ 𝗔𝗛𝗠𝗘𝗗 𝗦𝗢𝗝𝗜𝗕 ]\n│https://m.me/ahmed.sojib49\n────────────⭓`; // its not decoy so change it if you want 
+      msg += `\n╭─────⭓\n│🌟 | [ 𝗔𝗛𝗠𝗘𝗗 𝗦𝗢𝗝𝗜𝗕 ]\n│https://m.me/ahmed.sojib49\n╰────────────⭓`; // its not decoy so change it if you want 
 
 
       await message.reply({
@@ -93,7 +93,7 @@ module.exports = {
   │ Author: ${author}
   ├── Usage
   │ ${usage}
-  ╰──────────⭓`;
+  ╰──────⭓`;
 
         await message.reply(response);
       }
@@ -101,7 +101,7 @@ module.exports = {
   },
 };
 
-function roleTextToStringroleTextToString(roleText) {
+function roleTextToString(roleText) {
   switch (roleText) {
     case 0:
       return "0 (All users)";
