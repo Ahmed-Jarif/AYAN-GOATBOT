@@ -28,7 +28,7 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "RK-RASEL",
+  "nickNameBot": "𝗙𝗿𝗲𝗲 𝗕𝗼𝘁",
   "prefix": "!",
   "database": {
     "type": "sqlite",
