@@ -1,6 +1,5 @@
 const fs = require('fs');
 const moment = require('moment-timezone');
-
 module.exports = {
   config: {
     name: "info",
@@ -80,7 +79,7 @@ module.exports = {
 ❏𝗨𝗽𝘁𝗶𝗺𝗲↠ ${uptimeString}
 
 ﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋﹋
-𝗧𝗵𝗮𝗻𝗸𝘀 𝗙𝗼𝗿 𝗨𝘀𝗶𝗻𝗴 ↠ ${botName}
+𝗧𝗵𝗮𝗻𝗸𝘀 𝗙𝗼𝗿 𝗨𝘀𝗶𝗻𝗴 ↠ $/{botName}
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏`,
       attachment: await global.utils.getStreamFromURL(link)
     });
