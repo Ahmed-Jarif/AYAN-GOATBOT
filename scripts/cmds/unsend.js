@@ -1,33 +1,40 @@
 module.exports = {
-	config: {
-		name: "unsend",
-		version: "1.2",
-		author: "NTKhang",
-		countDown: 5,
-		role: 0,
-		description: {
-			vi: "Gỡ tin nhắn của bot",
-			en: "Unsend bot's message"
-		},
-		category: "box chat",
-		guide: {
-			vi: "reply tin nhắn muốn gỡ của bot và gọi lệnh {pn}",
-			en: "reply the message you want to unsend and call the command {pn}"
-		}
-	},
+  config: {
+    name: "unsend",
+    aliases: ["un","u"],
+    author: "kshitiz",  
+    version: "2.0",
+    cooldowns: 5,
+    role: 0,
+    shortDescription: {
+      en: ""
+    },
+    longDescription: {
+      en: "unsent all messages sent by bot"
+    },
+    category: "𝗕𝗢𝗫",
+    guide: {
+      en: "{p}{n}"
+    }
+  },
+  onStart: async function ({ api, event }) {
 
-	langs: {
-		vi: {
-			syntaxError: "Vui lòng reply tin nhắn muốn gỡ của bot"
-		},
-		en: {
-			syntaxError: "Please reply the message you want to unsend"
-		}
-	},
+    const unsendBotMessages = async () => {
+      const threadID = event.threadID;
 
-	onStart: async function ({ message, event, api, getLang }) {
-		if (!event.messageReply || event.messageReply.senderID != api.getCurrentUserID())
-			return message.reply(getLang("syntaxError"));
-		message.unsend(event.messageReply.messageID);
-	}
+
+      const botMessages = await api.getThreadHistory(threadID, 100); // Adjust the limit as needed 50 = 50 msg
+
+
+      const botSentMessages = botMessages.filter(message => message.senderID === api.getCurrentUserID());
+
+
+      for (const message of botSentMessages) {
+        await api.unsendMessage(message.messageID);
+      }
+    };
+
+
+    await unsendBotMessages();
+  }
 };
