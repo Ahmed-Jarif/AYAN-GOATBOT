@@ -20,7 +20,7 @@ module.exports = {
  return message.reply({
  body: `✨𝗛𝗶 𝗙𝗿𝗶𝗲𝗻𝗱!✨\n✨𝗧𝗵𝗶𝘀 𝗶𝘀 𝗺𝘆 𝗣𝗿𝗲𝗳𝗶𝘅 [ / ]\n\n
 𝗧𝗢 𝗩𝗜𝗘𝗪 𝗔𝗟𝗟 𝗢𝗙 𝗧𝗛𝗘\n𝗔𝗩𝗔𝗜𝗟𝗔𝗕𝗟𝗘  𝗖𝗢𝗠𝗠𝗔𝗡𝗗, 𝗧𝗬𝗣𝗘 [/𝗛𝗘𝗟𝗣]`,
-  attachment: await global.utils.getStreamFromURL("https://i.imgur.com/f6gSvmQ.mp4")
+  attachment: await global.utils.getStreamFromURL("")
  });
  }
  }
